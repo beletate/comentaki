@@ -4,6 +4,7 @@ import './App.css';
 import NewComment from './NewComment'
 import Comments from './Comments'
 import CreateUser from './CreateUser'
+import UserInfo from './UserInfo'
 
 import { AuthProvider } from './auth'
 
@@ -13,10 +14,11 @@ function App() {
       <div>
         <NewComment />
         <Comments />
-        <CreateUser/>
+        <CreateUser />
+        <UserInfo />
       </div>
     </AuthProvider>
-  );
+  )
 }
 
 export default App;
