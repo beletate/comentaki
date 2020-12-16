@@ -37,6 +37,7 @@ const UserInfo = () => {
         <React.Fragment>
             <p>Olá {dn}!</p>
             <FormDisplayName displayName={dn} user={auth.user} />
+            <button onClick={auth.signout}>Sair</button>
         </React.Fragment>
     )
 }
