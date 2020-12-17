@@ -8,14 +8,14 @@ const FormDisplayName = ({ displayName, user }) => {
     }
 
     const save = () => {
-        if(newDisplayName !== ''){
-            user.updateProfile({displayName: newDisplayName})
+        if (newDisplayName !== '') {
+            user.updateProfile({ displayName: newDisplayName })
         }
     }
     return (
         <React.Fragment>
-            <input type='text' value={newDisplayName} onChange={onChange}/>
-            <button className='btn' onClick={save}>Save Display Name</button>
+            <input type='text' value={newDisplayName} onChange={onChange} />
+            <button className='mx-2 btn btn-outline-success' onClick={save}>Save Display Name</button>
         </React.Fragment>
     )
 }
@@ -34,10 +34,12 @@ const UserInfo = () => {
     const dn = displayName || alternativeDisplayName
 
     return (
-        <React.Fragment>
+        <React.Fragment >
             <p>Olá {dn}!</p>
+
             <FormDisplayName displayName={dn} user={auth.user} />
-            <button onClick={auth.signout}>Sair</button>
+
+            <button className='btn btn btn-outline-danger' onClick={auth.signout}>Sair</button>
         </React.Fragment>
     )
 }

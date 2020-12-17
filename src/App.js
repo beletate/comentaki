@@ -9,18 +9,22 @@ import SignInUser from './SignInUser'
 
 import { AuthProvider } from './auth'
 
+
 function App() {
-  return (
+
+    return (
     <AuthProvider>
-      <div>
+      <div className='container text-center my-4'>
         <NewComment />
         <Comments />
+        <SignInUser />
+        <br/>
         <CreateUser />
         <UserInfo />
-        <SignInUser />
       </div>
     </AuthProvider>
   )
 }
+
 
 export default App;

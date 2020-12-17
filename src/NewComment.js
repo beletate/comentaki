@@ -29,9 +29,9 @@ const NewComment = props => {
     }
     return (
         <div>
-            <textarea value={comment} onChange={evt => setComment(evt.target.value)} />
+            <textarea className='form-control' value={comment} onChange={evt => setComment(evt.target.value)} />
             <br/>
-            <button onClick={createComment}>Comentar</button>
+            <button className='btn btn-dark' onClick={createComment}>Comentar</button>
         </div>
     )
 }
